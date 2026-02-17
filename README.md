@@ -189,23 +189,22 @@ Node Exporter is an open-source tool that exposes a wide variety of hardware- an
 
 ----
   
-### Basic PromQL Queries
-# Basic PromQL Queries (Node Exporter + Prometheus)
+## Basic PromQL Queries
 
-## CPU Usage %
+### CPU Usage %
 ```promql
 100 - (avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
 ```
 Shows CPU usage percentage per instance.
 
-## Memory Usage %
+### Memory Usage %
 ```promql
 (node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes)
 / node_memory_MemTotal_bytes * 100
 ```
 Shows memory usage percentage.
 
-## Disk Usage %
+### Disk Usage %
 ```promql
 (node_filesystem_size_bytes{fstype!="tmpfs"} - node_filesystem_free_bytes{fstype!="tmpfs"})
 / node_filesystem_size_bytes{fstype!="tmpfs"} * 100
@@ -218,24 +217,24 @@ node_load1
 ```
 Shows system load average (1 minute).
 
-## Network Traffic (Incoming)
+### Network Traffic (Incoming)
 ```promql
 rate(node_network_receive_bytes_total[5m])
 ```
 Shows incoming traffic in bytes/sec.
 
-## Network Traffic (Outgoing)
+### Network Traffic (Outgoing)
 ```promql
 rate(node_network_transmit_bytes_total[5m])
 ```
 Shows outgoing traffic in bytes/sec.
 
-## Filter by Specific Instance
+### Filter by Specific Instance
 ```promql
 node_load1{instance="10.0.1.10:9100"}
 ```
 
 
-## License
+### License
 
 MIT License (or specify your license here)
