@@ -4,6 +4,8 @@
 This project provides a simple, script-based setup for a monitoring stack using Prometheus, Grafana, Node Exporter, Alertmanager, and PagerDuty. Each component is managed by a dedicated shell script, making it easy to deploy and run on a Unix-like system. The stack enables not only monitoring and visualization, but also alerting and incident management.
 ---
 
+<img src="https://github.com/aniljadhavmca/Monitoring-Alerting-Grafana-PagerDuty/blob/main/images/Production%E2%80%91Ready%20EC2%20Observability-1.png" alt="EC2 Observability Architecture" width="800">
+
 ### 3. Alertmanager
 
 **Purpose:**
